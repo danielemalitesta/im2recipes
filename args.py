@@ -8,7 +8,8 @@ def get_parser():
     parser.add_argument('--no-cuda', action='store_true')
 
     # data
-    parser.add_argument('--img_path', default='data/images/')
+    parser.add_argument('--img_path', default='data/allrecipes/')
+    parser.add_argument('--features_path', default='data/features/')
     parser.add_argument('--data_path', default='data/')
     parser.add_argument('--workers', default=30, type=int)
 
@@ -49,7 +50,7 @@ def get_parser():
 
     # test
     parser.add_argument('--path_results', default='results/', type=str)
-    parser.add_argument('--model_path', default='snapshots/model_e220_v-4.700.pth.tar', type=str)
+    parser.add_argument('--model_path', default='models/model_e500_v-8.950.pth.tar', type=str)
     parser.add_argument('--test_image_path', default='chicken.jpg', type=str)    
 
     # MedR / Recall@1 / Recall@5 / Recall@10
